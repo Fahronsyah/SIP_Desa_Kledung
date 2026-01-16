@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengaturan - SIP Desa Kledung</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+    }
+
+    header {
+      background: linear-gradient(to right, #0d1b2a, #1b263b, #274472);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 1.8em;
+      color: #274472;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .settings-group {
+      margin-bottom: 30px;
+    }
+
+    .settings-group h3 {
+      color: #333;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #274472;
+      padding-bottom: 5px;
+    }
+
+    .settings-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .settings-group input,
+    .settings-group select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .btn-save {
+      background: #274472;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-save:hover {
+      background: #1b263b;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pengaturan SIP Desa Kledung</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil Desa</a></li>
+        <li><a href="peta.html">Peta</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">Pengaturan Sistem</h2>
+
+    <!-- Pengaturan Akun -->
+    <div class="settings-group">
+      <h3>Pengaturan Akun</h3>
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Masukkan Username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Masukkan Password Baru">
+    </div>
+
+    <!-- Pengaturan Hak Akses -->
+    <div class="settings-group">
+      <h3>Hak Akses</h3>
+      <label for="role">Pilih Peran</label>
+      <select id="role">
+        <option value="admin">Admin</option>
+        <option value="editor">Editor</option>
+        <option value="viewer">Viewer</option>
+      </select>
+    </div>
+
+    <!-- Pengaturan Tampilan -->
+    <div class="settings-group">
+      <h3>Tampilan</h3>
+      <label for="theme">Tema Dashboard</label>
+      <select id="theme">
+        <option value="light">Terang</option>
+        <option value="dark">Gelap</option>
+      </select>
+    </div>
+
+    <button class="btn-save">Simpan Pengaturan</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Sistem Informasi Pertanahan Desa Kledung. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

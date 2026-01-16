@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrasi - SIP Desa Kledung</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0d1b2a, #1b263b, #274472);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .register-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 400px;
+      text-align: center;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 50px;
+      height: auto;
+    }
+
+    .logo-title h2 {
+      color: #274472;
+      margin: 0;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .btn-register {
+      width: 100%;
+      padding: 12px;
+      background: #274472;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-register:hover {
+      background: #1b263b;
+    }
+
+    .register-footer {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .register-footer a {
+      color: #274472;
+      text-decoration: none;
+    }
+
+    .register-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <div class="logo-title">
+      <img src="https://assets.dianisa.com/media/2025/03/Logo-Kabupaten-Temanggung-Dianisa.com_.png" alt="Logo Desa Kledung" class="logo" />
+      <h2>Registrasi Akun</h2>
+    </div>
+
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="newUsername">Username</label>
+        <input type="text" id="newUsername" name="newUsername" placeholder="Masukkan Username" />
+      </div>
+      <div class="form-group">
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" name="newPassword" placeholder="Masukkan Password" />
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Konfirmasi Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ulangi Password" />
+      </div>
+      <button type="submit" class="btn-register">Daftar</button>
+    </form>
+
+    <div class="register-footer">
+      <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const username = document.getElementById("newUsername").value.trim();
+      const password = document.getElementById("newPassword").value.trim();
+      const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+      if (username === "" || password === "" || confirmPassword === "") {
+        alert("Semua field wajib diisi!");
+      } else if (password !== confirmPassword) {
+        alert("Password dan konfirmasi tidak sama!");
+      } else {
+        alert("Registrasi berhasil! Silakan login dengan akun baru.");
+        window.location.href = "login.html"; // kembali ke halaman login
+      }
+    });
+  </script>
+</body>
+</html>
